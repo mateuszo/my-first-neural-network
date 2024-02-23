@@ -41,4 +41,4 @@ def play_game():
 
 
 def generate_results(n):
-    return [play_game() for i in range(10)]
+    return [play_game() for i in range(n)]
