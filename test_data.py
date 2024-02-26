@@ -1,6 +1,3 @@
-import math
-
-
 def generate_end_game_boards():
     # List to store all end game boards along with the winner
     end_game_boards = []
@@ -12,7 +9,7 @@ def generate_end_game_boards():
             end_game_boards.append((board, winner))
             return
         if is_draw(board):
-            end_game_boards.append((board, "Draw"))
+            end_game_boards.append((board, " "))
             return
         for i in range(3):
             for j in range(3):
@@ -46,18 +43,3 @@ def generate_end_game_boards():
     generate_board(empty_board, "X")
 
     return end_game_boards
-
-
-# Generate all possible end game boards
-end_game_boards = generate_end_game_boards()
-
-# # Print all end game boards
-# for i, (board, winner) in enumerate(end_game_boards, 1):
-#     print(f"End game board {i}:")
-#     for row in board:
-#         print(" | ".join(row))
-#         print("-" * (len(row) * 2 - 1))
-#     print("Winner:", winner)
-#     print()
-
-print(len(end_game_boards))
