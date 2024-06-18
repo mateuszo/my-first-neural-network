@@ -111,7 +111,7 @@ correct_count = 0
 best_output = []
 best_game = {}
 print("----- Training -----")
-for epoch in range(100_001):
+for epoch in range(30_001):
 
     # Adjust weights and biases
     layer1.weights += LEARNING_RATE * gen_weights(layer1.n_inputs, layer1.n_neurons)
